@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Meta Tags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="./img/index.png">
+  <!--Title-->
+  <title>ICT PANEL - Contact</title>
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Barlow:wght@400;500;700;800;900&display=swap" rel="stylesheet"> 
+  <!--Font Awesome Files-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <!--CSS Files-->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <link rel="stylesheet" href="css/navbar-fixed.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrap mcb-wrap two-third  valign-top clearfix" style="padding:10px 20px 10px 20px">
+    <div class="py-lg-5 py-md-4 py-sm-3 py-2"></div>
+    <div class="row justify-content-center pt-5">
+        <div class="col-lg-7 col-md-10">
+            <h3 class="fw-normal text-center mb-5 border-bottom pb-2">Contact With Our Help Team</h3>
+
+            <form class="form_overlay" method="POST" accept-charset="UTF-8" autocomplete="off" name="contact"> 
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="input_overlay">
+                            <label for="fname" class="lable">First Name</label>
+                            <input type="text" name="first_name" class="form-control" required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input_overlay">
+                            <label for="lname" class="lable">Last Name</label>
+                            <input type="text" name="last_name" class="form-control" required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input_overlay">
+                            <label for="email" class="lable">Email Address</label>
+                            <input type="text" name="email" class="form-control" required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input_overlay">
+                            <label for="phone" class="lable">Phone Number</label>
+                            <input type="text" name="phone" class="form-control" required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input_overlay">
+                            <label for="subject" class="lable">Topic</label>
+                            <input type="text" name="topic" class="form-control" required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input_overlay textarea">
+                            <label for="desc" class="lable">Message</label>
+                            <textarea name="message" cols="30" rows="4" class="form-control" required autocomplete="off"></textarea>
+                        </div>
+                    </div>
+                     
+                    <div class="col-12 text-end">
+                    <button type="submit" class="btn btn-primary mt-3" style="background-color: #F0AA66; border: none;">Submit</button>
+                    </div>
+                    <p id="demo"></p>
+                </div>
+                 
+            </form>
+        </div>
+    </div>
+
+
+</main>
+
+
+
+
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzqXNOZVnrdRofmi9_7gf4262_RKtekB7UupyLQAyF0tbjot0tyo_YyR1OAx3OlZslH/exec'
+const form = document.forms['contact']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => document.getElementById("demo").innerHTML = "<div class='alert alert-primary' role='alert'><b>Thanks for contacting us</b></div>",contact.reset())
+    .catch(error => console.error('Error!', error.message))
+})
+</script>
+ <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "105551812449917");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+  <!--JS Scripts-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/navbar-fixed.js"></script>
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

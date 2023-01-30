@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Meta Tags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="./img/index.png">
+  <!--Title-->
+  <title>ICT PANEL - Home</title>
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Barlow:wght@400;500;700;800;900&display=swap" rel="stylesheet"> 
+  <!--Font Awesome Files-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <!--CSS Files-->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <link rel="stylesheet" href="css/navbar-fixed.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <!--Books Section-->
+ <section id="Books" class="text-center py-5 mb-5">
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-12">
+        <h2 class="section-title" data-aos="fade-up">আমার ক্লাস সমূহ </h2>
+        <a href="#" class="sub-title" data-aos="fade-up">স্টোরে ঘুরে আসুন  <span><i class="fa fa-chevron-right"></i></span></a>
+       </div>
+     </div>
+     <div class="owl-carousel owl-theme" data-aos="fade-up">
+      <div class="item">
+        <div class="slider-content pb-5 pt-2 my-4">
+          <a href="courses/c-programming/playlist.html">
+            <img src="courses/c-programming/img/thumbnail.png" alt="spoken-eng-thumb" class="slider-img img-fluid">
+            <h3 class="slider-title">C-Programming</h3>
+            <p class="book-author">Tanjimur Rahman Arpon</p>
+          </a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="slider-content pb-4 pt-2 my-4">
+          <a href="courses/html/playlist.html">
+            <img src="courses/html/img/thumbnail.png" alt="spoken-eng-thumb" class="slider-img img-fluid">
+            <h3 class="slider-title">HTML</h3>
+            <p class="book-author">Tanjimur Rahman Arpon</p>
+          </a>
+        </div>
+      </div>
+  
+ </section>
+ <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "105551812449917");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+  <!--JS Scripts-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/navbar-fixed.js"></script>
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
